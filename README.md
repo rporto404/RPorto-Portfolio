@@ -1,4 +1,4 @@
-# Portfolio - Ryan Portorreal 
+# Portfolio - Ryan Portorreal
 
 Explanation of Technologies Used:
 
@@ -11,9 +11,10 @@ I also used Jquery to create 3 points of interaction for the user.
 - In the aside section of my webpages, Users can click buttons to cycle through various pictures.
 
 Approach Taken:
-- I wanted to have my webpages look neat and organized, so I structured the webpages to look uniform and static. I'm also not very good at making pretty looking websites so I focused on the functionality first before changing colors and using pictures.
+- I wanted to have my webpages look neat and organized, so I structured the webpages to look uniform and static. I tend to struggle with making pretty looking websites so I focused on the functionality first before changing colors and using pictures.
 
 Link to Live Site:
+https://exquisite-blancmange-da111a.netlify.app/
 
 Unsolved Problems:
 - The text on my webpages don't scale with the window size so it feels like there is a bunch of empty space when the webpage is expanded to full-screen.
