@@ -9,50 +9,35 @@ $(() => {
   $('#7').on('click', hideBio3);
   $('#8').on('click', hideBio4);
 
-  const $openBtn1 = $('#openModal1')
-  const $openBtn2 = $('#openModal2')
-  const $openBtn3 = $('#openModal3')
-  const $openBtn4 = $('#openModal4')
-  const $modal1 = $('#modal1')
-  const $modal2 = $('#modal2')
-  const $modal3 = $('#modal3')
-  const $modal4 = $('#modal4')
-  const $closeBtn1 = $('#close1')
-  const $closeBtn2 = $('#close2')
-  const $closeBtn3 = $('#close3')
-  const $closeBtn4 = $('#close4')
-  const openModal1 = () => {
-    $modal1.css('display', 'block')
-  }
-  const openModal2 = () => {
-    $modal2.css('display', 'block')
-  }
-  const openModal3 = () => {
-    $modal3.css('display', 'block')
-  }
-  const openModal4 = () => {
-    $modal4.css('display', 'block')
-  }
-  const closeModal1 = () => {
-    $modal1.css('display', 'none')
-  }
-  const closeModal2 = () => {
-    $modal2.css('display', 'none')
-  }
-  const closeModal3 = () => {
-    $modal3.css('display', 'none')
-  }
-  const closeModal4 = () => {
-    $modal4.css('display', 'none')
-  }
-  $openBtn1.on('click', openModal1)
-  $openBtn2.on('click', openModal2)
-  $openBtn3.on('click', openModal3)
-  $openBtn4.on('click', openModal4)
-  $closeBtn1.on('click', closeModal1)
-  $closeBtn2.on('click', closeModal2)
-  $closeBtn3.on('click', closeModal3)
-  $closeBtn4.on('click', closeModal4)
+  $('#openModal1').on('click', openModal1)
+  $('#openModal2').on('click', openModal2)
+  $('#openModal3').on('click', openModal3)
+  $('#openModal4').on('click', openModal4)
+  $('#close1').on('click', closeModal1)
+  $('#close2').on('click', closeModal2)
+  $('#close3').on('click', closeModal3)
+  $('#close4').on('click', closeModal4)
+
+  let currentImgIndex = 0
+  const numOfImages = $('.imgSet2').children().length - 1
+  $('.next').on('click', () => {
+    $('.imgSet2').children().eq(currentImgIndex).css('display', 'none')
+    if(currentImgIndex < numOfImages) {
+      currentImgIndex ++
+    } else {
+      currentImgIndex = 0
+    }
+    $('.imgSet2').children().eq(currentImgIndex).css('display', 'block')
+  })
+  $('.previous').on('click', () => {
+    $('.imgSet2').children().eq(currentImgIndex).css('display', 'none')
+    if(currentImgIndex > 0) {
+      currentImgIndex --
+    } else {
+      currentImgIndex = numOfImages
+    }
+    $('.imgSet2').children().eq(currentImgIndex).css('display', 'block')
+  })
 })
 const hideBioAll = () => {
   $("#5").hide()
@@ -103,4 +88,28 @@ const hideBio4 = () => {
   $("#current").hide()
   $("#8").hide()
   $("#4").show()
+}
+const openModal1 = () => {
+  $('#modal1').css('display', 'block')
+}
+const openModal2 = () => {
+  $('#modal2').css('display', 'block')
+}
+const openModal3 = () => {
+  $('#modal3').css('display', 'block')
+}
+const openModal4 = () => {
+  $('#modal4').css('display', 'block')
+}
+const closeModal1 = () => {
+  $('#modal1').css('display', 'none')
+}
+const closeModal2 = () => {
+  $('#modal2').css('display', 'none')
+}
+const closeModal3 = () => {
+  $('#modal3').css('display', 'none')
+}
+const closeModal4 = () => {
+  $('#modal4').css('display', 'none')
 }

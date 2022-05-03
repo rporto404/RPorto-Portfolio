@@ -73,12 +73,29 @@ body {
   padding-bottom: 30px;
 }
 
-#imgSet1, #imgSet2 {
+.imgSet1, .imgSet2 {
   background-color: darkgrey;
   width: 100px;
   height: 100px;
   margin: 0px auto;
+}
+
+.imgSet1 {
   border-radius: 50px;
+}
+
+.imgSet2 img {
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+
+.imgSet2 img:first-of-type {
+  display:block;
+}
+
+.previous, .next {
+  margin: 5px 0px;
 }
 
 aside ul {
