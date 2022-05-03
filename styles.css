@@ -1,0 +1,160 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: slategrey;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar {
+  background-color: grey;
+  border: solid 1px;
+  display: flex;
+}
+
+.navbar a {
+  margin: 0;
+  border: solid 1px;
+  padding: 15px 0px;
+  text-align: center;
+  width: 25%;
+  height: auto;
+}
+
+.footer {
+  background-color: grey;
+  border: solid 1px;
+  display: flex;
+  /* justify-content: space-between; */
+  margin-top: auto;
+}
+
+.footer a {
+  margin: 0;
+  border: solid 1px;
+  padding: 15px 0px;
+  text-align: center;
+  width: 25%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 8px;
+  flex: 1;
+}
+
+.main article {
+  background-color: grey;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  width: 99%;
+  height: 99%;
+  margin: 8px 0px;
+  padding: 8px 0px;
+}
+
+.main aside {
+  background-color: grey;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  width: 99%;
+  padding: 8px 0px;
+  padding-bottom: 30px;
+}
+
+#imgSet1, #imgSet2 {
+  background-color: darkgrey;
+  width: 100px;
+  height: 100px;
+  margin: 0px auto;
+  border-radius: 50px;
+}
+
+aside ul {
+  padding-left: 0;
+}
+
+aside li {
+  list-style-type: none;
+  margin: 8px auto;
+  text-align: center;
+}
+
+#modal1, #modal2, #modal3, #modal4 {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+	display: none;
+}
+#modal-textbox1, #modal-textbox2, #modal-textbox3, #modal-textbox4 {
+	background-color: white;
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+	margin: 150px auto;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+	padding: 2%;
+	line-height: 120%;
+	font-family: arial;
+}
+#modal-footer1, #modal-footer2, #modal-footer3, #modal-footer4 {
+	text-align: right;
+}
+.modal-buttons {
+	padding: 14px 18px;
+		background-color: #677996;
+		border: none;
+		outline: none;
+		border-radius: 3px;
+		color: white;
+		font-family: 'Arial';
+		cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 8px;
+    flex: 1;
+  }
+
+  .main article {
+    background-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    margin: 0;
+    margin-left: 8px;
+    width: 70%;
+    height: auto;
+    padding: 8px;
+  }
+
+  .main aside {
+    background-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    width: 30%;
+    height: auto;
+    padding: 8px;
+  }
+}
